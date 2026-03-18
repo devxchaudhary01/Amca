@@ -4,7 +4,6 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import About from './AboutComponents/About'
 import HeroSection from './components/Hero'
-import Update from './Updates/Update'
 import AhuBlog from './Updates/AhuBlog'
 import ResearchBlog from './Updates/Research'
 import Gallery from './gallery/First'
@@ -21,7 +20,6 @@ const App = () => {
         <Routes>
           <Route path='/' element={<HeroSection />} />
           <Route path='/about-us' element={<About />} />
-          <Route path='/updates' element={<Update />} />
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/ahu-blog' element={<AhuBlog />} />
           <Route path='/research-blog' element={<ResearchBlog />} />
