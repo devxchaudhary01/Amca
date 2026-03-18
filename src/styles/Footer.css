@@ -1,0 +1,189 @@
+.footer {
+  position: relative;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-overlay {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 70px 0 40px;
+}
+
+.footer-container {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.footer-col h3 {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-col ul li:hover {
+  color: #36b6b6;
+}
+
+.footer-icon {
+  margin-right: 8px;
+}
+
+.head-office {
+  margin-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.linkedin {
+  background: #0077b5;
+}
+
+.facebook {
+  background: #1877f2;
+}
+
+.instagram {
+  background: #e1306c;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.footer-stats {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-stats h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-stats p {
+  color: #ddd;
+}
+
+.footer-bottom {
+  background: black;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* =========================
+TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-overlay {
+    padding: 60px 20px 40px;
+  }
+
+}
+
+
+/* =========================
+MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-col {
+    margin-bottom: 25px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-col ul li {
+    justify-content: center;
+  }
+
+  .footer-stats {
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+
+  .footer-stats h2 {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+}
+
+
+/* =========================
+EXTRA SMALL DEVICES
+========================= */
+
+@media (max-width: 400px) {
+
+  .footer-overlay {
+    padding: 50px 15px 30px;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+  }
+
+  .footer-stats h2 {
+    font-size: 16px;
+  }
+
+}
