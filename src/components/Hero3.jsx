@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/hero3.css";
 
 import img4 from "../assets/4.png";
@@ -20,9 +20,28 @@ const cards = [
 const Hero3 = () => {
 
   const [index, setIndex] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(3);
+
+  // 👇 Detect screen size
+  useEffect(() => {
+    const updateView = () => {
+      if (window.innerWidth <= 768) {
+        setVisibleCards(1);
+      } else if (window.innerWidth <= 1024) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(3);
+      }
+    };
+
+    updateView();
+    window.addEventListener("resize", updateView);
+
+    return () => window.removeEventListener("resize", updateView);
+  }, []);
 
   const nextSlide = () => {
-    if (index < cards.length - 3) {
+    if (index < cards.length - visibleCards) {
       setIndex(index + 1);
     }
   };
@@ -40,7 +59,7 @@ const Hero3 = () => {
 
         <div
           className="engineering-cards"
-          style={{ transform: `translateX(-${index * 350}px)` }}
+          style={{ transform: `translateX(-${index * (100 / visibleCards)}%)` }}
         >
           {cards.map((card, i) => (
             <div className="card" key={i}>
@@ -55,7 +74,7 @@ const Hero3 = () => {
 
       <div className="slider-buttons">
         <button onClick={prevSlide} disabled={index === 0}>Prev</button>
-        <button onClick={nextSlide} disabled={index >= cards.length - 3}>Next</button>
+        <button onClick={nextSlide} disabled={index >= cards.length - visibleCards}>Next</button>
       </div>
 
     </section>
