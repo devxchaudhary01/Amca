@@ -190,7 +190,6 @@ const styles = {
   },
 
   overlay: {
-    background: "rgba(255,255,255,0.92)",
     padding: "40px 20px",
   },
 };
