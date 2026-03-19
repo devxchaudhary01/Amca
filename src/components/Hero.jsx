@@ -5,11 +5,10 @@ import "../styles/hero.css";
 import img2 from "../assets/h2.png";
 import img3 from "../assets/h3.png";
 import Hero1 from "./hero1";
-import Hero2 from "./Hero2";
-import Hero3 from "./Hero3";
+import Hero2 from "./Hero2"
 import Hero4 from "./Hero4";
 import Hero5 from "./Hero5";
-import Hero6 from "./Hero6";
+
 
 
 const images = [ img2, img3];
@@ -64,10 +63,8 @@ const HeroSection = () => {
     </section>
     <Hero1/>
     <Hero2/>
-    <Hero3/>
     <Hero4/>
     <Hero5/>
-    <Hero6/>
     </>
   );
 };
