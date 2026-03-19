@@ -8,7 +8,7 @@ import img4 from "../assets/g4.jpg";
 import img5 from "../assets/g5.jpg";
 import img6 from "../assets/g6.jpg";
 import img7 from "../assets/Amca.png";
-import img8 from "../assets/Amca1.png";
+import img8 from "../assets/Amca.png";
 
 const WorkGallery = () => {
 

@@ -4,7 +4,7 @@ import roof from "../assets/roof.png"
 import wall from "../assets/wall-fan.png"
 import yogo from "../assets/yogo.png"
 import exhaust from "../assets/exhaust.png"
-import geared from "../assets/Geared-fan.jpeg"
+import geared from "../assets/Greared-fan.jpeg"
 import pmsFan from "../assets/pmsFan.png"
 
 
@@ -13,7 +13,7 @@ const fansData = [
   {
     id: 1,
     title: "Geared HVLS Fans",
-    image: {geared},
+    image: geared,
 
     description:
       "Efficient Cooling & Ventilation Solutions for Large Spaces. Designed for industrial and commercial environments with high air circulation and energy efficiency.",
@@ -84,7 +84,7 @@ const fansData = [
   {
     id: 2,
     title: "PMSM HVLS Fans",
-    image: {h1},
+    image: pmsFan,
 
     description:
       "Energy-Efficient & Silent Operation. PMSM (Permanent Magnet Synchronous Motor) gearless fans deliver exceptional energy efficiency with ultra-quiet performance, ensuring consistent airflow across large spaces.",
@@ -194,7 +194,7 @@ const fansData = [
   {
     id: 3,
     title: "EMF PMSM HVLS Fans",
-    image: {pmsFan},
+    image: h1,
 
     description:
       "Extremely Energy Efficient Motors for Heavy Duty, Continuous Operations. EMF PMSM gearless fans with German make motors deliver superior efficiency, durability, and ultra-quiet performance for 24×7 industrial use.",
@@ -307,7 +307,7 @@ const fansData = [
   {
     id: 4,
     title: "Exhaust Fans",
-    image: {exhaust},
+    image: exhaust,
 
     description:
       "Energy-Efficient Industrial Exhaust Fans for Optimal Ventilation. Designed for powerful air displacement with low energy consumption, these fans ensure effective removal of heat, smoke, and odours in industrial environments.",
@@ -408,7 +408,7 @@ const fansData = [
   {
     id: 5,
     title: "Roof Extractors",
-    image: {roof},
+    image: roof,
 
     description:
       "Durable & Energy-Efficient Roof Ventilation. Designed for industrial and commercial environments, roof extractors provide powerful airflow to remove heat, smoke, and airborne contaminants while maintaining low energy consumption and quiet operation.",
@@ -541,7 +541,7 @@ const fansData = [
   {
     id: 6,
     title: "Wall Mounted HVLS Fans",
-    image: {wall},
+    image: wall,
 
     description:
       "High Air Flow and Vertically Mounted. Wall-mounted HVLS fans deliver powerful and energy-efficient cooling with up to 160° adjustable airflow, making them ideal for industrial, commercial, and large open spaces.",
@@ -619,7 +619,7 @@ const fansData = [
   {
     id: 7,
     title: "YU-GO Fans",
-    image: {yogo},
+    image: yogo,
 
     description:
       "Portable, Energy-Efficient Fans for Versatile Cooling Requirements. YU-GO Fans are floor-mounted solutions designed for powerful and efficient air circulation across various spaces.",
@@ -695,7 +695,7 @@ const fansData = [
   {
     id: 8,
     title: "Grid Fans",
-    image: {grid},
+    image: grid,
     description:
       "Engineered for Enhanced Cooling, Comfort & Energy Efficiency. Grid Fans (Air Circulators) are ceiling-mounted solutions designed to integrate seamlessly into standard false ceiling grids for efficient air distribution.",
 
