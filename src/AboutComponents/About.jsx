@@ -52,7 +52,7 @@ const About = () => {
             <p>
               We are a team of dedicated professionals committed to enhancing
               comfort and efficiency in industrial and commercial spaces.
-              Founded in 2011, our journey has been defined by innovation,
+              Founded in 2026, our journey has been defined by innovation,
               reliability, and a deep understanding of our clients’ needs.
             </p>
 
@@ -69,6 +69,7 @@ const About = () => {
       </section>
 
       {/* FOUNDER */}
+      {/* FOUNDER */}
 
       <section className="founder">
 
@@ -77,26 +78,42 @@ const About = () => {
           <div className="founder-img">
             <img src={founder} alt="Founder" />
             <h3>Rahul Verma</h3>
-            <span>Managing Director</span>
+            <span>Founder & Director – AMCA Industries</span>
           </div>
 
           <div className="founder-text">
 
             <p>
-              Rahul Verma is the Founder and Director of Advance Machines and Components Access Industries ( AMCA Industries), a company dedicated to delivering advanced HVAC, industrial ventilation, and energy-efficient cooling solutions for industrial and commercial applications. With over 15
-              Rahul holds a Bachelor of Technology (B.Tech) in Electronics, Instrumentation & Control Engineering from YMCA Institute of Engineering and Technology, Faridabad, Haryana. His engineering background provided him with a strong foundation in automation, instrumentation, and system optimization, which plays a vital role in the development of high-performance airflow and cooling systems.
+              Rahul Verma is the Founder and Director of Advance Machines and Components Access Industries (AMCA Industries), a company dedicated to delivering advanced HVAC, industrial ventilation, and energy-efficient cooling solutions for industrial and commercial applications. With over 15 years of professional experience in HVAC systems, industrial airflow management, and climate control technologies, he has established himself as a dynamic entrepreneur committed to innovation and quality.
             </p>
 
             <p>
-              In 2011, he founded Autodynamics Engineering with a clear
-              vision: to design innovative engineered air solutions that
-              reduce energy consumption and improve air quality.
+              Rahul holds a Bachelor of Technology (B.Tech) in Electronics, Instrumentation & Control Engineering from YMCA Institute of Engineering and Technology, Faridabad, Haryana. His engineering background provides a strong foundation in automation, instrumentation, and system optimization, which plays a vital role in developing high-performance airflow and cooling systems.
             </p>
 
             <p>
-              Today, the company operates from a 20,000 sq ft facility
-              equipped with advanced production and quality systems.
+              To complement his technical expertise, Rahul pursued an MBA in Finance and Marketing from Harcourt Butler Technical University (HBTU), Kanpur, Uttar Pradesh. This combination of engineering knowledge and business strategy enables him to bridge technology with market needs, driving innovation and sustainable business growth.
             </p>
+
+            <p>
+              With a passion for HVAC technology and industrial climate control, Rahul founded AMCA Industries with the vision of delivering reliable, energy-efficient, and technologically advanced airflow solutions for factories, warehouses, commercial buildings, and large industrial spaces.
+            </p>
+
+            <p>
+              Under his leadership, the company specializes in HVLS fans, evaporative air cooling systems, industrial ventilation systems, and HVAC airflow optimization technologies. He has consistently focused on enhancing workplace comfort, productivity, and energy efficiency.
+            </p>
+
+            <p>
+              Guided by his commitment to innovation, quality, and customer satisfaction, Rahul Verma continues to lead AMCA Industries toward becoming a recognized name in HVAC engineering and advanced cooling technologies.
+            </p>
+
+            <h4 style={{ marginTop: "20px" }}>Founder’s Vision</h4>
+
+            <p style={{ fontStyle: "italic" }}>
+              "Our goal is to engineer smart HVAC and airflow solutions that create comfortable, efficient, and sustainable environments for industries."
+            </p>
+
+            <p style={{ fontWeight: "bold" }}>— Rahul Verma</p>
 
           </div>
 
