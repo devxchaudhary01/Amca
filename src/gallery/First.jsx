@@ -11,6 +11,8 @@ import {
   FaBuilding,
   FaCity
 } from "react-icons/fa";
+import Hero3 from "../components/Hero3";
+import Hero5 from "../components/Hero5";
 
 const industries = [
   {
@@ -78,6 +80,9 @@ const Gallery = () => {
         </div>
 
       </div>
+
+      <Hero3/>
+      <Hero5/>
     </section>
   );
 };
