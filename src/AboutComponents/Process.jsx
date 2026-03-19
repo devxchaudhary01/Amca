@@ -134,7 +134,7 @@ const Process = () => {
 
               <div className="stat-card">
                 <FaTools className="stat-icon" />
-                <h3>100+</h3>
+                <h3>1000+</h3>
                 <p>Industrial Installations</p>
               </div>
 

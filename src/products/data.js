@@ -1,9 +1,19 @@
+import h1 from "../assets/hvls.png"
+import grid from "../assets/gridfan.jpeg"
+import roof from "../assets/roof.png"
+import wall from "../assets/wall-fan.png"
+import yogo from "../assets/yogo.png"
+import exhaust from "../assets/exhaust.png"
+import geared from "../assets/Geared-fan.jpeg"
+import pmsFan from "../assets/pmsFan.png"
+
+
 const fansData = [
 
   {
     id: 1,
     title: "Geared HVLS Fans",
-    image: "https://images.unsplash.com/photo-1581093458791-9d2b6c3c8c4b",
+    image: {geared},
 
     description:
       "Efficient Cooling & Ventilation Solutions for Large Spaces. Designed for industrial and commercial environments with high air circulation and energy efficiency.",
@@ -74,7 +84,7 @@ const fansData = [
   {
     id: 2,
     title: "PMSM HVLS Fans",
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7",
+    image: {h1},
 
     description:
       "Energy-Efficient & Silent Operation. PMSM (Permanent Magnet Synchronous Motor) gearless fans deliver exceptional energy efficiency with ultra-quiet performance, ensuring consistent airflow across large spaces.",
@@ -184,7 +194,7 @@ const fansData = [
   {
     id: 3,
     title: "EMF PMSM HVLS Fans",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+    image: {pmsFan},
 
     description:
       "Extremely Energy Efficient Motors for Heavy Duty, Continuous Operations. EMF PMSM gearless fans with German make motors deliver superior efficiency, durability, and ultra-quiet performance for 24×7 industrial use.",
@@ -297,7 +307,7 @@ const fansData = [
   {
     id: 4,
     title: "Exhaust Fans",
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952",
+    image: {exhaust},
 
     description:
       "Energy-Efficient Industrial Exhaust Fans for Optimal Ventilation. Designed for powerful air displacement with low energy consumption, these fans ensure effective removal of heat, smoke, and odours in industrial environments.",
@@ -398,7 +408,7 @@ const fansData = [
   {
     id: 5,
     title: "Roof Extractors",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    image: {roof},
 
     description:
       "Durable & Energy-Efficient Roof Ventilation. Designed for industrial and commercial environments, roof extractors provide powerful airflow to remove heat, smoke, and airborne contaminants while maintaining low energy consumption and quiet operation.",
@@ -531,7 +541,7 @@ const fansData = [
   {
     id: 6,
     title: "Wall Mounted HVLS Fans",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+    image: {wall},
 
     description:
       "High Air Flow and Vertically Mounted. Wall-mounted HVLS fans deliver powerful and energy-efficient cooling with up to 160° adjustable airflow, making them ideal for industrial, commercial, and large open spaces.",
@@ -604,7 +614,154 @@ const fansData = [
 
     warranty: "Standard industrial warranty",
     noise: "<75 dB"
+  },
+
+  {
+    id: 7,
+    title: "YU-GO Fans",
+    image: {yogo},
+
+    description:
+      "Portable, Energy-Efficient Fans for Versatile Cooling Requirements. YU-GO Fans are floor-mounted solutions designed for powerful and efficient air circulation across various spaces.",
+
+    overview: [
+      "Portable floor-mounted cooling solution",
+      "Available in 6 ft and 8 ft sizes",
+      "Energy-efficient motor for low power consumption",
+      "Provides natural wind chill effect",
+      "Ideal for flexible and multi-location use"
+    ],
+
+    features: [
+      "Heavy-duty wheels for easy mobility",
+      "Compact and durable construction",
+      "Adjustable speed control",
+      "Quiet operation for comfort",
+      "High airflow performance",
+      "Plug-and-play easy usage"
+    ],
+
+    benefits: [
+      "Easy to move and reposition",
+      "Cost-effective cooling solution",
+      "Low maintenance requirements",
+      "Energy saving performance",
+      "Suitable for temporary and permanent setups"
+    ],
+
+    safety: [
+      "Strong and stable base structure",
+      "Protected motor housing",
+      "Durable fan blades",
+      "Safe operation with minimal vibration"
+    ],
+
+    applications: [
+      "Factories and warehouses",
+      "Workshops and industrial units",
+      "Commercial spaces",
+      "Outdoor and semi-open areas",
+      "Events and temporary setups"
+    ],
+
+    design: [
+      "Compact floor-mounted design",
+      "Wheel-based mobility system",
+      "Rugged industrial build quality",
+      "Optimized for portability and durability"
+    ],
+
+    specifications: [
+      {
+        size: "6 ft",
+        type: "Portable Floor Mounted",
+        airflow: "High Airflow",
+        mobility: "Yes (Wheels Included)"
+      },
+      {
+        size: "8 ft",
+        type: "Portable Floor Mounted",
+        airflow: "Very High Airflow",
+        mobility: "Yes (Wheels Included)"
+      }
+    ],
+
+    warranty: "Standard industrial warranty",
+    noise: "Low noise operation",
+
+    brochure: "Download Brochure"
+  },
+
+  {
+    id: 8,
+    title: "Grid Fans",
+    image: {grid},
+    description:
+      "Engineered for Enhanced Cooling, Comfort & Energy Efficiency. Grid Fans (Air Circulators) are ceiling-mounted solutions designed to integrate seamlessly into standard false ceiling grids for efficient air distribution.",
+
+    overview: [
+      "Fits standard 2’ x 2’ false ceiling grids",
+      "Provides uniform air distribution across large areas",
+      "Creates natural wind chill effect",
+      "Reduces load on air conditioning systems",
+      "Enhances energy efficiency and cost savings"
+    ],
+
+    features: [
+      "Ceiling-mounted compact design",
+      "Revolving louvers for better air circulation",
+      "Energy-efficient motor performance",
+      "Quiet operation for indoor comfort",
+      "Easy installation in modular ceilings",
+      "Low maintenance system"
+    ],
+
+    benefits: [
+      "Improves indoor air circulation",
+      "Reduces electricity bills by lowering AC usage",
+      "Maintains consistent cooling",
+      "Ideal for energy-conscious environments",
+      "Long-lasting and reliable performance"
+    ],
+
+    safety: [
+      "Secure ceiling mounting structure",
+      "Durable internal components",
+      "Stable and vibration-free operation",
+      "Protected motor housing"
+    ],
+
+    applications: [
+      "Offices and corporate spaces",
+      "Shopping malls and showrooms",
+      "Hospitals and clinics",
+      "Hotels and restaurants",
+      "Residential apartments",
+      "Commercial and industrial buildings"
+    ],
+
+    design: [
+      "Compact 2’ x 2’ grid-compatible structure",
+      "False ceiling integrated design",
+      "Modern and minimal appearance",
+      "Optimized airflow distribution system"
+    ],
+
+    specifications: [
+      {
+        size: "2 ft x 2 ft",
+        mounting: "False Ceiling Grid",
+        airflow: "Uniform Air Distribution",
+        louvers: "Revolving Louvers"
+      }
+    ],
+
+    warranty: "Standard industrial warranty",
+    noise: "Low noise operation",
+
+    brochure: "Download Brochure"
   }
+
 ];
 
 export default fansData;
