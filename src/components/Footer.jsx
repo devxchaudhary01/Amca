@@ -7,85 +7,170 @@ const Footer = () => {
       <footer
         style={{
           ...styles.footer,
-          backgroundImage: `url(${bg})`
+          backgroundImage: `url(${bg})`,
         }}
       >
         <div style={styles.overlay}>
-
-          <div className="footer-container" style={styles.container}>
+          <div className="footer-container">
 
             {/* QUICK LINKS */}
-            <div style={styles.col}>
-              <h3 style={styles.heading}>QUICK LINKS</h3>
-              <ul style={styles.list}>
-                <li>HOME</li>
-                <li>ABOUT US</li>
-                <li>PRODUCT RANGE</li>
-                <li>ENQUIRY</li>
-                <li>GALLERY</li>
-                <li>CONTACT US</li>
+            <div className="footer-col">
+              <h3>Quick Links</h3>
+              <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Product Range</li>
+                <li>Enquiry</li>
+                <li>Gallery</li>
+                <li>Contact Us</li>
               </ul>
             </div>
 
             {/* PRODUCTS */}
-            <div style={styles.col}>
-              <h3 style={styles.heading}>PRODUCTS</h3>
-              <ul style={styles.list}>
-                <li>HVLS FANS</li>
-                <li>INDUSTRIAL AIRCOOLER</li>
-                <li>EXHAUSTS FANS</li>
-                <li>AIR CIRCULATORS</li>
-                <li>WALLMOUNT BLDC FANS</li>
+            <div className="footer-col">
+              <h3>Products</h3>
+              <ul>
+                <li>HVLS Fans</li>
+                <li>Industrial Aircooler</li>
+                <li>Exhaust Fans</li>
+                <li>Air Circulators</li>
+                <li>Wallmount BLDC Fans</li>
                 <li>AHU</li>
               </ul>
             </div>
 
             {/* CONTACT */}
-            <div style={styles.col}>
-              <h3 style={styles.heading}>GET IN TOUCH WITH US</h3>
+            <div className="footer-col">
+              <h3>Get In Touch</h3>
 
-              <p>📞 (+91) 9217962766, 9625676397</p>
-              <p>📞 +91 9958620640</p>
+              <p>
+                📞 <a href="tel:+919217962766">+91 9217962766</a>
+              </p>
+              <p>
+                📞 <a href="tel:+919625676397">+91 9625676397</a>
+              </p>
+              <p>
+                📞 <a href="tel:+919958620640">+91 9958620640</a>
+              </p>
 
-              <p>✉ info@amcaindustries.com</p>
-              <p style={styles.link}>sales@amcaindustries.com</p>
+              <p>
+                ✉ <a href="mailto:info@amcaindustries.com">
+                  info@amcaindustries.com
+                </a>
+              </p>
+              <p>
+                ✉ <a href="mailto:sales@amcaindustries.com">
+                  sales@amcaindustries.com
+                </a>
+              </p>
 
-              <p>🌐 www.amcaindustries.com</p>
+              <p>
+                🌐{" "}
+                <a
+                  href="https://www.amcaindustries.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  amcaindustries.com
+                </a>
+              </p>
 
-              <p style={{ marginTop: "10px" }}>
+              <p className="address">
                 Plot No.110, NGIA, Sector 51, Faridabad, Haryana-121004
               </p>
             </div>
 
           </div>
 
+          {/* Bottom Bar */}
+          <div className="footer-bottom">
+            © {new Date().getFullYear()} AMCA Industries. All rights reserved.
+          </div>
         </div>
       </footer>
 
-      {/* RESPONSIVE CSS */}
+      {/* CSS */}
       <style>{`
         .footer-container {
-          display: flex;
-          justify-content: space-between;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
           gap: 40px;
-          flex-wrap: wrap;
+          max-width: 1100px;
+          margin: auto;
         }
+
+        .footer-col h3 {
+          color: red;
+          font-size: 15px;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+        }
+
+        .footer-col ul {
+          list-style: none;
+          padding: 0;
+        }
+
+        .footer-col ul li {
+          margin-bottom: 8px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+
+        .footer-col ul li:hover {
+          color: red;
+          transform: translateX(5px);
+        }
+
+        .footer-col p {
+          margin: 6px 0;
+          font-size: 14px;
+        }
+
+        .footer-col a {
+          color: black;
+          text-decoration: none;
+          transition: 0.3s;
+        }
+
+        .footer-col a:hover {
+          color: red;
+          text-decoration: underline;
+        }
+
+        .address {
+          margin-top: 10px;
+          line-height: 1.5;
+        }
+
+        .footer-bottom {
+          text-align: center;
+          margin-top: 40px;
+          font-size: 13px;
+          border-top: 1px solid #ccc;
+          padding-top: 15px;
+        }
+
+        /* RESPONSIVE */
 
         @media (max-width: 900px) {
           .footer-container {
-            flex-direction: column;
-            gap: 30px;
+            grid-template-columns: 1fr 1fr;
             text-align: center;
           }
         }
 
-        @media (max-width: 500px) {
-          .footer-container h3 {
-            font-size: 13px;
+        @media (max-width: 600px) {
+          .footer-container {
+            grid-template-columns: 1fr;
           }
 
-          .footer-container li,
-          .footer-container p {
+          .footer-col h3 {
+            font-size: 14px;
+          }
+
+          .footer-col p,
+          .footer-col li {
             font-size: 13px;
           }
         }
@@ -101,42 +186,13 @@ const styles = {
     padding: "50px 20px",
     fontFamily: "Arial, sans-serif",
     position: "relative",
-    color: "#000"
+    color: "#000",
   },
 
   overlay: {
-    background: "rgba(255,255,255,0.9)", // white overlay like image
-    padding: "40px 20px"
+    background: "rgba(255,255,255,0.92)",
+    padding: "40px 20px",
   },
-
-  container: {
-    maxWidth: "1100px",
-    margin: "auto"
-  },
-
-  col: {
-    flex: "1",
-    minWidth: "250px"
-  },
-
-  heading: {
-    color: "red",
-    fontSize: "14px",
-    marginBottom: "15px",
-    fontWeight: "bold"
-  },
-
-  list: {
-    listStyle: "none",
-    padding: 0,
-    lineHeight: "2"
-  },
-
-  link: {
-    color: "blue",
-    textDecoration: "underline",
-    cursor: "pointer"
-  }
 };
 
 export default Footer;
