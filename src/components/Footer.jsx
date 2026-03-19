@@ -1,5 +1,5 @@
 import React from "react";
-import bg from "../assets/b1.jpg";
+
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       <footer
         style={{
           ...styles.footer,
-          backgroundImage: `url(${bg})`,
+       
         }}
       >
         <div style={styles.overlay}>
