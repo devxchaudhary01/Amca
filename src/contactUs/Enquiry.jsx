@@ -52,205 +52,199 @@ const EnquiryForm = () => {
     };
 
     return (
-        <section style={styles.section}>
+        <>
+            <section style={styles.section}>
 
-            <h2 style={styles.title}>Get In Touch With Us</h2>
+                <div style={styles.container}>
 
-            <div style={styles.container}>
+                    {/* ================= LEFT SIDE ================= */}
+                    <div style={styles.left}>
 
-                {/* FORM */}
-                <form onSubmit={handleSubmit} style={styles.form}>
+                        <h2 style={styles.leftTitle}>Get In Touch</h2>
 
-                    <input
-                        style={styles.input}
-                        name="company"
-                        placeholder="Company Name"
-                        required
-                        value={form.company}
-                        onChange={handleChange}
-                    />
-
-                    <input
-                        style={styles.input}
-                        name="phone"
-                        placeholder="Phone Number"
-                        required
-                        value={form.phone}
-                        onChange={handleChange}
-                    />
-
-                    <input
-                        style={styles.input}
-                        type="email"
-                        name="email"
-                        placeholder="Email Address"
-                        required
-                        value={form.email}
-                        onChange={handleChange}
-                    />
-
-                    <input
-                        style={styles.input}
-                        name="city"
-                        placeholder="City"
-                        required
-                        value={form.city}
-                        onChange={handleChange}
-                    />
-
-                    <input
-                        style={styles.input}
-                        name="product"
-                        placeholder="Product"
-                        required
-                        value={form.product}
-                        onChange={handleChange}
-                    />
-
-                    <input
-                        style={styles.input}
-                        type="number"
-                        name="quantity"
-                        placeholder="Quantity"
-                        required
-                        value={form.quantity}
-                        onChange={handleChange}
-                    />
-
-                    <textarea
-                        style={styles.textarea}
-                        name="productDetail"
-                        placeholder="Tell us your requirement..."
-                        required
-                        value={form.productDetail}
-                        onChange={handleChange}
-                    />
-
-                    <button style={styles.button} disabled={loading}>
-                        {loading ? "Sending..." : "Send Enquiry"}
-                    </button>
-
-                </form>
-
-                {/* MAP */}
-                <div style={styles.mapWrapper}>
-
-                    <iframe
-                        title="AMCA Location"
-                        src="https://www.google.com/maps?q=28.36283187581311,77.26266297549094&z=15&output=embed"
-                        style={styles.map}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-
-                    {/* ADDRESS CARD */}
-                    <div style={styles.infoCard}>
-                        <h4 style={{ margin: 0 }}>AMCA Industries</h4>
-                        <p style={{ margin: "5px 0 0" }}>
-                            Plot No. 110, Sector 51 <br />
-                            Faridabad, Haryana
+                        <p style={styles.infoText}>
+                            We would love to hear from you. Reach out using the details below.
                         </p>
+
+                        <div style={styles.infoBlock}>
+                            <h4>📞 Phone</h4>
+                            <p>+91 9217962766</p>
+                            <p>+91 9625676397</p>
+                        </div>
+
+                        <div style={styles.infoBlock}>
+                            <h4>📧 Email</h4>
+                            <p>info@amcaindustries.com</p>
+                            <p>sales@amcaindustries.com</p>
+                            <p>🌐 www.amcaindustries.com</p>
+                        </div>
+
+                        <div style={styles.infoBlock}>
+                            <h4>📍 Address</h4>
+                            <p>
+                                Plot No 110, NGIA, Sector 51,<br />
+                                Faridabad, Haryana <br />
+                                121004 <br />
+                                Amca Machines & Components Access <br />
+                                Industries (AMCA Industris)
+                            </p>
+
+                            {/* 👉 Coordinates Added */}
+                            <p style={{ marginTop: "10px", fontSize: "13px", color: "#777" }}>
+                                📌 28°21'46.2"N 77°15'54.9"E <br />
+                                (28.362832, 77.265238)
+                            </p>
+                        </div>
+
                     </div>
 
+                    {/* ================= RIGHT SIDE FORM ================= */}
+                    <form onSubmit={handleSubmit} style={styles.form}>
+
+                        <h2 style={styles.title}>Send Enquiry</h2>
+
+                        <input style={styles.input} name="company" placeholder="Company Name" required value={form.company} onChange={handleChange} />
+                        <input style={styles.input} name="phone" placeholder="Phone Number" required value={form.phone} onChange={handleChange} />
+                        <input style={styles.input} type="email" name="email" placeholder="Email Address" required value={form.email} onChange={handleChange} />
+                        <input style={styles.input} name="city" placeholder="City" required value={form.city} onChange={handleChange} />
+                        <input style={styles.input} name="product" placeholder="Product" required value={form.product} onChange={handleChange} />
+                        <input style={styles.input} type="number" name="quantity" placeholder="Quantity" required value={form.quantity} onChange={handleChange} />
+
+                        <textarea
+                            style={styles.textarea}
+                            name="productDetail"
+                            placeholder="Tell us your requirement..."
+                            required
+                            value={form.productDetail}
+                            onChange={handleChange}
+                        />
+
+                        <button style={styles.button} disabled={loading}>
+                            {loading ? "Sending..." : "Send Enquiry"}
+                        </button>
+
+                    </form>
+
                 </div>
+            </section>
 
+            {/* ================= FULL WIDTH MAP ================= */}
+            <div style={styles.mapContainer}>
+                <iframe
+                    src="https://www.google.com/maps?q=28.362832,77.265238&z=15&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    title="Google Map"
+                ></iframe>
             </div>
-        </section>
-    );
+        </>
+    )
 };
 
-export default EnquiryForm;
+    export default EnquiryForm;
 
 
+    // ================= STYLES =================
 
-// ================= STYLES =================
+    const styles = {
 
-const styles = {
+        section: {
+            padding: "70px 20px",
+            background: "#f4f6f8",
+            fontFamily: "Arial, sans-serif"
+        },
 
-    section: {
-        padding: "70px 20px",
-        background: "#f4f6f8",
-        fontFamily: "Arial, sans-serif"
-    },
+        container: {
+            maxWidth: "1200px",
+            margin: "auto",
+            display: "flex",
+            gap: "40px",
+            flexWrap: "wrap",
+            alignItems: "stretch"
+        },
 
-    title: {
-        textAlign: "center",
-        fontSize: "30px",
-        marginBottom: "40px",
-        fontWeight: "700",
-        color: "#222"
-    },
+        /* LEFT SIDE */
+        left: {
+            flex: "1",
+            minWidth: "300px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "20px"
+        },
 
-    container: {
-        maxWidth: "1200px",
-        margin: "auto",
-        display: "flex",
-        gap: "30px",
-        flexWrap: "wrap"
-    },
+        leftTitle: {
+            fontSize: "32px",
+            fontWeight: "700",
+            color: "#0d3b66"
+        },
 
-    form: {
-        flex: "1",
-        minWidth: "300px",
-        background: "#fff",
-        padding: "25px",
-        borderRadius: "10px",
-        boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
-        display: "flex",
-        flexDirection: "column",
-        gap: "15px"
-    },
+        infoText: {
+            color: "#555",
+            fontSize: "14px",
+            lineHeight: "1.6"
+        },
 
-    input: {
-        padding: "12px",
-        borderRadius: "6px",
-        border: "1px solid #ddd",
-        fontSize: "14px",
-        outline: "none"
-    },
+        infoBlock: {
+            background: "#fff",
+            padding: "15px",
+            borderRadius: "10px",
+            boxShadow: "0 5px 15px rgba(0,0,0,0.08)"
+        },
 
-    textarea: {
-        padding: "12px",
-        borderRadius: "6px",
-        border: "1px solid #ddd",
-        minHeight: "100px",
-        fontSize: "14px"
-    },
+        /* FORM */
+        form: {
+            flex: "1",
+            minWidth: "320px",
+            background: "#fff",
+            padding: "25px",
+            borderRadius: "12px",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+            display: "flex",
+            flexDirection: "column",
+            gap: "15px"
+        },
 
-    button: {
-        background: "#e60023",
-        color: "#fff",
-        padding: "12px",
-        border: "none",
-        borderRadius: "6px",
-        cursor: "pointer",
-        fontWeight: "bold"
-    },
+        title: {
+            fontSize: "24px",
+            fontWeight: "600",
+            marginBottom: "10px",
+            color: "#222"
+        },
 
-    mapWrapper: {
-        flex: "1",
-        minWidth: "300px",
-        borderRadius: "10px",
-        overflow: "hidden",
-        boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-        position: "relative"
-    },
+        input: {
+            padding: "12px",
+            borderRadius: "8px",
+            border: "1px solid #ddd",
+            fontSize: "14px",
+            outline: "none"
+        },
 
-    map: {
-        width: "100%",
-        height: "450px",
-        border: "0"
-    },
+        textarea: {
+            padding: "12px",
+            borderRadius: "8px",
+            border: "1px solid #ddd",
+            minHeight: "100px",
+            fontSize: "14px"
+        },
 
-    infoCard: {
-        position: "absolute",
-        bottom: "15px",
-        left: "15px",
-        background: "rgba(0,0,0,0.8)",
-        color: "#fff",
-        padding: "12px",
-        borderRadius: "8px",
-        fontSize: "13px"
-    }
-};
+        button: {
+            background: "#0d3b66",
+            color: "#fff",
+            padding: "12px",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+            fontWeight: "bold"
+        },
+        mapContainer: {
+            width: "100%",
+            height: "400px",
+            marginTop: "40px"
+        }
+    };
+
+

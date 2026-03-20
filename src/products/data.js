@@ -6,6 +6,7 @@ import yogo from "../assets/yogo.png"
 import exhaust from "../assets/exhaust.png"
 import geared from "../assets/hvls2.png"
 import pmsFan from "../assets/pmsFan.png"
+import ahu from "../assets/ahu.jpeg"
 
 
 const fansData = [
@@ -760,6 +761,66 @@ const fansData = [
     noise: "Low noise operation",
 
     brochure: "Download Brochure"
+  },
+
+  {
+    id: 9,
+    title: "Air Handling Unit (AHU)",
+    image: ahu, // 👉 add your AHU image import here
+
+    description:
+      "Advanced Air Handling Units (AHU) designed for efficient air circulation, temperature control, and indoor air quality management. Ideal for commercial and industrial HVAC applications.",
+
+    features: [
+      "Airflow up to 144,000 m³/h",
+      "Customized design as per customer requirements",
+      "Optimized for cost-effective and standardized production",
+      "Plug-and-play control system for flexible operation",
+      "Factory-installed control cabinet with Direct Digital Control (DDC)",
+      "Built-in temperature, humidity, and CO₂ sensors",
+      "Controls mixing dampers, rotary heat exchangers, water valves, and pressure switches",
+      "Efficient fan motor and inverter management system",
+      "Supports chilled water, hot water, DX cooling, and heating coils",
+      "Compatible with ERAD-E / ERAR / VRV systems",
+      "Supports multiple refrigerant circuits (up to 4 circuits per DX coil)"
+    ],
+
+    overview: [
+      "High-performance air handling for large spaces",
+      "Energy-efficient HVAC solution",
+      "Flexible configuration for multiple applications",
+      "Integrated smart control system",
+      "Improves indoor air quality and comfort"
+    ],
+
+    benefits: [
+      "Reduces operational and energy costs",
+      "Ensures precise climate control",
+      "Easy installation with plug-and-play system",
+      "Low maintenance with integrated automation",
+      "Suitable for diverse industrial and commercial environments"
+    ],
+
+    applications: [
+      "Commercial buildings",
+      "Hospitals and healthcare facilities",
+      "Shopping malls",
+      "Airports and railway stations",
+      "Industrial plants and factories",
+      "Clean rooms and laboratories"
+    ],
+
+    controls: [
+      "Direct Digital Control (DDC)",
+      "Temperature control system",
+      "Humidity control system",
+      "CO₂ monitoring system",
+      "Pressure switch control",
+      "Fan and inverter control"
+    ],
+
+    warranty: "Standard industrial warranty",
+    note: "Supports multiple HVAC configurations including chilled water, DX systems, and VRV applications"
   }
 
 ];

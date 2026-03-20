@@ -7,15 +7,18 @@ import HeroSection from './components/Hero'
 import AhuBlog from './Updates/AhuBlog'
 import ResearchBlog from './Updates/Research'
 import Gallery from './gallery/First'
-import EnquiryForm from './contactUs/Enquiry'
+
 import Fans from './products/Fan'
 import FanDetails from './products/FanDetail'
+import ScrollToTop from './components/ScrollTop'
+import EnquiryForm from './contactUs/Enquiry'
 
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path='/' element={<HeroSection />} />
@@ -23,7 +26,7 @@ const App = () => {
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/ahu-blog' element={<AhuBlog />} />
           <Route path='/research-blog' element={<ResearchBlog />} />
-          <Route path='/contact-us' element={<EnquiryForm />} />
+          <Route path='/contact-us' element ={<EnquiryForm/>} />
           <Route path='/products' element={<Fans />} />
           <Route path='/fan/:id' element={<FanDetails />} />
         </Routes>

@@ -39,9 +39,7 @@ const Hero2 = () => {
 
             <p>{item.desc}</p>
 
-            <button className="explore-btn">
-              Explore <span>»</span>
-            </button>
+          
 
           </div>
         ))}
