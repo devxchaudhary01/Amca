@@ -1,10 +1,10 @@
-import h1 from "../assets/hvls.png"
+import h1 from "../assets/hvls2.png"
 import grid from "../assets/gridfan.jpeg"
 import roof from "../assets/roof.png"
-import wall from "../assets/wall-fan.png"
+import wall from "../assets/wallFan.png"
 import yogo from "../assets/yogo.png"
 import exhaust from "../assets/exhaust.png"
-import geared from "../assets/Greared-fan.jpeg"
+import geared from "../assets/hvls2.png"
 import pmsFan from "../assets/pmsFan.png"
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./enquiry.css";
+import logo from "../assets/logo.jpeg";
 
 const EnquiryForm = () => {
 
@@ -13,7 +13,7 @@ const EnquiryForm = () => {
         productDetail: ""
     });
 
-    const [loading, setLoading] = useState(false); // ✅ NEW
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -21,13 +21,12 @@ const EnquiryForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (loading) return;
 
-        if (loading) return; // ✅ prevent multiple clicks
-
-        setLoading(true); // ✅ start loading
+        setLoading(true);
 
         try {
-            const res = await fetch("https://script.google.com/macros/s/AKfycbwjeNekj0dezu1-p5n-kfY5qTOkrqX7o7-Ir2XRvW7rI9RXxZGc_y6OxF5FZizAYqy8vg/exec", {
+            const res = await fetch("YOUR_GOOGLE_SCRIPT_URL", {
                 method: "POST",
                 body: JSON.stringify(form)
             });
@@ -46,54 +45,199 @@ const EnquiryForm = () => {
                     productDetail: ""
                 });
             }
-
-        } catch (err) {
-            alert("Error submitting form ❌");
+        } catch {
+            alert("Error ❌");
         } finally {
-            setLoading(false); // ✅ always stop loading
+            setLoading(false);
         }
     };
 
     return (
-        <section className="enquiry-section">
-            <h2>Send Enquiry</h2>
+        <section style={styles.section}>
 
-            <form onSubmit={handleSubmit} className="enquiry-form">
+            <h2 style={styles.title}>Get In Touch With Us</h2>
 
-                <input name="company" placeholder="Company Name" required value={form.company} onChange={handleChange} />
-                <input name="phone" placeholder="Phone Number" required value={form.phone} onChange={handleChange} />
-                <input name="email" type="email" placeholder="Email" required value={form.email} onChange={handleChange} />
-                <input name="city" placeholder="City" required value={form.city} onChange={handleChange} />
+            <div style={styles.container}>
 
-                <input name="product" placeholder="Product" required value={form.product} onChange={handleChange} />
-                <input name="quantity" type="number" placeholder="Quantity" required value={form.quantity} onChange={handleChange} />
+                {/* FORM */}
+                <form onSubmit={handleSubmit} style={styles.form}>
 
-                <textarea
-                    name="productDetail"
-                    placeholder="Product Details"
-                    required
-                    value={form.productDetail}
-                    onChange={handleChange}
-                />
+                    <input style={styles.input} name="company" placeholder="Company Name" required value={form.company} onChange={handleChange} />
+                    <input style={styles.input} name="phone" placeholder="Phone Number" required value={form.phone} onChange={handleChange} />
+                    <input style={styles.input} name="email" type="email" placeholder="Email Address" required value={form.email} onChange={handleChange} />
+                    <input style={styles.input} name="city" placeholder="City" required value={form.city} onChange={handleChange} />
 
-                {/* ✅ BUTTON UPDATED */}
-                <button type="submit" disabled={loading}>
-                    {loading ? "Sending..." : "Submit Enquiry"}
-                </button>
+                    <input style={styles.input} name="product" placeholder="Product" required value={form.product} onChange={handleChange} />
+                    <input style={styles.input} type="number" name="quantity" placeholder="Quantity" required value={form.quantity} onChange={handleChange} />
 
-            </form>
+                    <textarea
+                        style={styles.textarea}
+                        name="productDetail"
+                        placeholder="Tell us your requirement..."
+                        required
+                        value={form.productDetail}
+                        onChange={handleChange}
+                    />
 
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3510.5954772867517!2d77.2641877754913!3d28.371077175808487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20No.%20110%2C%20NGIA%2C%20Sector%2051%2C%20Faridabad%2C%20Haryana-121004!5e0!3m2!1sen!2sin!4v1773742088561!5m2!1sen!2sin"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+                    <button style={styles.button} disabled={loading}>
+                        {loading ? "Sending..." : "Send Enquiry"}
+                    </button>
+
+                </form>
+
+                {/* MAP */}
+                <div style={styles.mapWrapper}>
+
+                    <iframe
+                        src="https://www.google.com/maps?q=28.358583,77.261525&z=15&output=embed"
+                        style={styles.map}
+                        loading="lazy"
+                        allowFullScreen
+                        referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+
+                    {/* 🔴 CENTER LOGO MARKER */}
+                    <div style={styles.marker}>
+                        <div style={styles.pulse}></div>
+                        <img src={logo} alt="logo" style={styles.logo} />
+                    </div>
+
+                    {/* ADDRESS CARD */}
+                    <div style={styles.infoCard}>
+                        <h4 style={{ margin: 0 }}>AMCA Industries</h4>
+                        <p style={{ margin: "5px 0 0" }}>
+                            Plot No. 110, Sector 51 <br />
+                            Faridabad, Haryana
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
         </section>
     );
 };
 
 export default EnquiryForm;
+
+
+const styles = {
+
+    section: {
+        padding: "70px 20px",
+        background: "#f4f6f8",
+        fontFamily: "Arial, sans-serif"
+    },
+
+    title: {
+        textAlign: "center",
+        fontSize: "30px",
+        marginBottom: "40px",
+        fontWeight: "700",
+        color: "#222"
+    },
+
+    container: {
+        maxWidth: "1200px",
+        margin: "auto",
+        display: "flex",
+        gap: "30px",
+        flexWrap: "wrap"
+    },
+
+    form: {
+        flex: "1",
+        minWidth: "300px",
+        background: "#fff",
+        padding: "25px",
+        borderRadius: "10px",
+        boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+        display: "flex",
+        flexDirection: "column",
+        gap: "15px"
+    },
+
+    input: {
+        padding: "12px",
+        borderRadius: "6px",
+        border: "1px solid #ddd",
+        fontSize: "14px",
+        outline: "none"
+    },
+
+    textarea: {
+        padding: "12px",
+        borderRadius: "6px",
+        border: "1px solid #ddd",
+        minHeight: "100px",
+        fontSize: "14px"
+    },
+
+    button: {
+        background: "#e60023",
+        color: "#fff",
+        padding: "12px",
+        border: "none",
+        borderRadius: "6px",
+        cursor: "pointer",
+        fontWeight: "bold"
+    },
+
+    /* MAP */
+    mapWrapper: {
+        flex: "1",
+        minWidth: "300px",
+        position: "relative",
+        borderRadius: "10px",
+        overflow: "hidden",
+        boxShadow: "0 8px 25px rgba(0,0,0,0.15)"
+    },
+
+    map: {
+        width: "100%",
+        height: "450px",
+        border: 0
+    },
+
+    /* MARKER */
+    marker: {
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -100%)",
+        zIndex: 2
+    },
+
+    logo: {
+        width: "45px",
+        height: "45px",
+        borderRadius: "50%",
+        border: "3px solid #fff",
+        background: "#fff"
+    },
+
+    /* PULSE */
+    pulse: {
+        position: "absolute",
+        width: "60px",
+        height: "60px",
+        background: "rgba(230,0,35,0.4)",
+        borderRadius: "50%",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        animation: "pulse 1.5s infinite"
+    },
+
+    /* ADDRESS */
+    infoCard: {
+        position: "absolute",
+        bottom: "15px",
+        left: "15px",
+        background: "rgba(0,0,0,0.8)",
+        color: "#fff",
+        padding: "12px",
+        borderRadius: "8px",
+        fontSize: "13px"
+    }
+};
