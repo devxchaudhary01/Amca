@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.jpeg";
 
 const EnquiryForm = () => {
 
@@ -28,7 +27,7 @@ const EnquiryForm = () => {
         try {
             const res = await fetch("YOUR_GOOGLE_SCRIPT_URL", {
                 method: "POST",
-                body: JSON.stringify(form)
+                body: JSON.stringify(form),
             });
 
             const data = await res.json();
@@ -45,7 +44,7 @@ const EnquiryForm = () => {
                     productDetail: ""
                 });
             }
-        } catch {
+        } catch (err) {
             alert("Error ❌");
         } finally {
             setLoading(false);
@@ -62,13 +61,61 @@ const EnquiryForm = () => {
                 {/* FORM */}
                 <form onSubmit={handleSubmit} style={styles.form}>
 
-                    <input style={styles.input} name="company" placeholder="Company Name" required value={form.company} onChange={handleChange} />
-                    <input style={styles.input} name="phone" placeholder="Phone Number" required value={form.phone} onChange={handleChange} />
-                    <input style={styles.input} name="email" type="email" placeholder="Email Address" required value={form.email} onChange={handleChange} />
-                    <input style={styles.input} name="city" placeholder="City" required value={form.city} onChange={handleChange} />
+                    <input
+                        style={styles.input}
+                        name="company"
+                        placeholder="Company Name"
+                        required
+                        value={form.company}
+                        onChange={handleChange}
+                    />
 
-                    <input style={styles.input} name="product" placeholder="Product" required value={form.product} onChange={handleChange} />
-                    <input style={styles.input} type="number" name="quantity" placeholder="Quantity" required value={form.quantity} onChange={handleChange} />
+                    <input
+                        style={styles.input}
+                        name="phone"
+                        placeholder="Phone Number"
+                        required
+                        value={form.phone}
+                        onChange={handleChange}
+                    />
+
+                    <input
+                        style={styles.input}
+                        type="email"
+                        name="email"
+                        placeholder="Email Address"
+                        required
+                        value={form.email}
+                        onChange={handleChange}
+                    />
+
+                    <input
+                        style={styles.input}
+                        name="city"
+                        placeholder="City"
+                        required
+                        value={form.city}
+                        onChange={handleChange}
+                    />
+
+                    <input
+                        style={styles.input}
+                        name="product"
+                        placeholder="Product"
+                        required
+                        value={form.product}
+                        onChange={handleChange}
+                    />
+
+                    <input
+                        style={styles.input}
+                        type="number"
+                        name="quantity"
+                        placeholder="Quantity"
+                        required
+                        value={form.quantity}
+                        onChange={handleChange}
+                    />
 
                     <textarea
                         style={styles.textarea}
@@ -89,18 +136,13 @@ const EnquiryForm = () => {
                 <div style={styles.mapWrapper}>
 
                     <iframe
-                        src="https://www.google.com/maps?q=28.358583,77.261525&z=15&output=embed"
+                        title="AMCA Location"
+                        src="https://www.google.com/maps?q=28.36283187581311,77.26266297549094&z=15&output=embed"
                         style={styles.map}
-                        loading="lazy"
                         allowFullScreen
+                        loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
-
-                    {/* 🔴 CENTER LOGO MARKER */}
-                    <div style={styles.marker}>
-                        <div style={styles.pulse}></div>
-                        <img src={logo} alt="logo" style={styles.logo} />
-                    </div>
 
                     {/* ADDRESS CARD */}
                     <div style={styles.infoCard}>
@@ -120,6 +162,9 @@ const EnquiryForm = () => {
 
 export default EnquiryForm;
 
+
+
+// ================= STYLES =================
 
 const styles = {
 
@@ -183,53 +228,21 @@ const styles = {
         fontWeight: "bold"
     },
 
-    /* MAP */
     mapWrapper: {
         flex: "1",
         minWidth: "300px",
-        position: "relative",
         borderRadius: "10px",
         overflow: "hidden",
-        boxShadow: "0 8px 25px rgba(0,0,0,0.15)"
+        boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+        position: "relative"
     },
 
     map: {
         width: "100%",
         height: "450px",
-        border: 0
+        border: "0"
     },
 
-    /* MARKER */
-    marker: {
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -100%)",
-        zIndex: 2
-    },
-
-    logo: {
-        width: "45px",
-        height: "45px",
-        borderRadius: "50%",
-        border: "3px solid #fff",
-        background: "#fff"
-    },
-
-    /* PULSE */
-    pulse: {
-        position: "absolute",
-        width: "60px",
-        height: "60px",
-        background: "rgba(230,0,35,0.4)",
-        borderRadius: "50%",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        animation: "pulse 1.5s infinite"
-    },
-
-    /* ADDRESS */
     infoCard: {
         position: "absolute",
         bottom: "15px",
