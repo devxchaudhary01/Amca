@@ -85,7 +85,7 @@ const EnquiryForm = () => {
                                 Plot No 110, NGIA, Sector 51,<br />
                                 Faridabad, Haryana <br />
                                 121004 <br />
-                                Amca Machines & Components Access <br />
+                                Advance Machines & Components Access <br />
                                 Industries (AMCA and Industries)
                             </p>
 
