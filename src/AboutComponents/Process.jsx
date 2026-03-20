@@ -128,7 +128,7 @@ const Process = () => {
 
               <div className="stat-card">
                 <FaUsers className="stat-icon" />
-                <h3>30+</h3>
+                <h3>200+</h3>
                 <p>Leading Corporate Clients</p>
               </div>
 

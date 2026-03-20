@@ -2,19 +2,21 @@ import React, { useState } from "react";
 import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo3.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate()
 
   return (
     <nav className="navbar">
 
       {/* LOGO */}
-      <div className="logo-box">
+      <div className="logo-box " onClick={()=> navigate('/')}>
         <div className="logo">
           <img src={logo} alt="AMCA Logo" />
-          <span className="company-name">AMCA INDUSTRIES</span>
-        </div>
+          <span className="company-name cursor-pointer">AMCA INDUSTRIES</span>
+        </div> 
 
         <p className="logo-sub">
           Advance Machines and Components Access Industries

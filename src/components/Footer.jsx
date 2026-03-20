@@ -55,7 +55,7 @@ const Footer = () => {
               📞 +91 98765 43210 <br />
               📧 support@amcaindustries.com <br />
               🌐 www.amcaindustries.com <br />
-              📍 Plot No. 110, Sector 51, Faridabad
+              📍 Plot No. 110, NGIA Sector 51, Faridabad 121004
             </p>
           </div>
 
@@ -64,9 +64,9 @@ const Footer = () => {
         {/* STATS */}
         <div className="statsRow">
           <div className="statBox first">1000+ <br /> Installations</div>
-          <div className="statBox second">300+ <br /> Cities</div>
+          <div className="statBox second">500+ <br /> Cities</div>
           <div className="statBox third">100+ <br /> Clients</div>
-          <div className="statBox fourth">50+ <br /> Industries</div>
+          <div className="statBox fourth">200+ <br /> Industries</div>
         </div>
 
         <div className="bottom">

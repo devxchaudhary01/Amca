@@ -57,8 +57,7 @@
 
 /* CONTACT */
 .footer-contactCard {
-  background: #fff;
-  color: #000;
+  color: white;
   padding: 15px;
   border-radius: 8px;
 }
@@ -87,28 +86,15 @@
 
 /* YOUR POSITIONS */
 .first {
-  position: relative;
-  right: 280px;
   bottom: 90px;
   padding: 30px;
 }
 
 .second {
-  position: relative;
-  right: 220px;
   bottom: 30px;
 }
 
-.third {
-  position: relative;
-  bottom: 40px;
-}
 
-.fourth {
-  position: relative;
-  left: 200px;
-  bottom: 40px;
-}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {

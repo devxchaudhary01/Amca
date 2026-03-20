@@ -74,8 +74,8 @@ const EnquiryForm = () => {
 
                         <div style={styles.infoBlock}>
                             <h4>📧 Email</h4>
-                            <p>info@amcaindustries.com</p>
-                            <p>sales@amcaindustries.com</p>
+                            <p>supports@amcaindustries.com</p>
+                            <p>sm@amcaindustries.com</p>
                             <p>🌐 www.amcaindustries.com</p>
                         </div>
 
