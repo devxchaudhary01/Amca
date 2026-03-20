@@ -55,7 +55,7 @@ const Footer = () => {
               📞  (+91) 9217962766 <br />
               📞  (+91) 9625676397
               <br />
-              📧 support@amcaindustries.com <br />
+              📧 supports@amcaindustries.com <br />
               🌐 www.amcaindustries.com <br />
               📍 Plot No. 110, NGIA Sector 51, Faridabad 121004
             </p>
