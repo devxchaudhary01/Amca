@@ -86,7 +86,7 @@ const EnquiryForm = () => {
                                 Faridabad, Haryana <br />
                                 121004 <br />
                                 Amca Machines & Components Access <br />
-                                Industries (AMCA Industris)
+                                Industries (AMCA and Industries)
                             </p>
 
                             {/* 👉 Coordinates Added */}
