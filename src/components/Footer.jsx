@@ -67,7 +67,7 @@ const Footer = () => {
         <div className="statsRow">
           <div className="statBox first">1000+ <br /> Installations</div>
           <div className="statBox second">500+ <br /> Cities</div>
-          <div className="statBox third">100+ <br /> Clients</div>
+          <div className="statBox third">400+ <br /> Clients</div>
           <div className="statBox fourth">200+ <br /> Industries</div>
         </div>
 
