@@ -83,10 +83,9 @@ const EnquiryForm = () => {
                             <h4>📍 Address</h4>
                             <p>
                                 Plot No 110, NGIA, Sector 51,<br />
-                                Faridabad, Haryana <br />
-                                121004 <br />
-                                Advance Machines & Components Access <br />
-                                Industries (AMCA and Industries)
+                                Faridabad, Haryana - 121004 <br />
+                                Advance Machines & Components  Access Industries <br />
+                                (AMCA  Industries)
                             </p>
 
                             {/* 👉 Coordinates Added */}
@@ -144,107 +143,107 @@ const EnquiryForm = () => {
     )
 };
 
-    export default EnquiryForm;
+export default EnquiryForm;
 
 
-    // ================= STYLES =================
+// ================= STYLES =================
 
-    const styles = {
+const styles = {
 
-        section: {
-            padding: "70px 20px",
-            background: "#f4f6f8",
-            fontFamily: "Arial, sans-serif"
-        },
+    section: {
+        padding: "70px 20px",
+        background: "#f4f6f8",
+        fontFamily: "Arial, sans-serif"
+    },
 
-        container: {
-            maxWidth: "1200px",
-            margin: "auto",
-            display: "flex",
-            gap: "40px",
-            flexWrap: "wrap",
-            alignItems: "stretch"
-        },
+    container: {
+        maxWidth: "1200px",
+        margin: "auto",
+        display: "flex",
+        gap: "40px",
+        flexWrap: "wrap",
+        alignItems: "stretch"
+    },
 
-        /* LEFT SIDE */
-        left: {
-            flex: "1",
-            minWidth: "300px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            gap: "20px"
-        },
+    /* LEFT SIDE */
+    left: {
+        flex: "1",
+        minWidth: "300px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        gap: "20px"
+    },
 
-        leftTitle: {
-            fontSize: "32px",
-            fontWeight: "700",
-            color: "#0d3b66"
-        },
+    leftTitle: {
+        fontSize: "32px",
+        fontWeight: "700",
+        color: "#0d3b66"
+    },
 
-        infoText: {
-            color: "#555",
-            fontSize: "14px",
-            lineHeight: "1.6"
-        },
+    infoText: {
+        color: "#555",
+        fontSize: "14px",
+        lineHeight: "1.6"
+    },
 
-        infoBlock: {
-            background: "#fff",
-            padding: "15px",
-            borderRadius: "10px",
-            boxShadow: "0 5px 15px rgba(0,0,0,0.08)"
-        },
+    infoBlock: {
+        background: "#fff",
+        padding: "15px",
+        borderRadius: "10px",
+        boxShadow: "0 5px 15px rgba(0,0,0,0.08)"
+    },
 
-        /* FORM */
-        form: {
-            flex: "1",
-            minWidth: "320px",
-            background: "#fff",
-            padding: "25px",
-            borderRadius: "12px",
-            boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px"
-        },
+    /* FORM */
+    form: {
+        flex: "1",
+        minWidth: "320px",
+        background: "#fff",
+        padding: "25px",
+        borderRadius: "12px",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+        display: "flex",
+        flexDirection: "column",
+        gap: "15px"
+    },
 
-        title: {
-            fontSize: "24px",
-            fontWeight: "600",
-            marginBottom: "10px",
-            color: "#222"
-        },
+    title: {
+        fontSize: "24px",
+        fontWeight: "600",
+        marginBottom: "10px",
+        color: "#222"
+    },
 
-        input: {
-            padding: "12px",
-            borderRadius: "8px",
-            border: "1px solid #ddd",
-            fontSize: "14px",
-            outline: "none"
-        },
+    input: {
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #ddd",
+        fontSize: "14px",
+        outline: "none"
+    },
 
-        textarea: {
-            padding: "12px",
-            borderRadius: "8px",
-            border: "1px solid #ddd",
-            minHeight: "100px",
-            fontSize: "14px"
-        },
+    textarea: {
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #ddd",
+        minHeight: "100px",
+        fontSize: "14px"
+    },
 
-        button: {
-            background: "#0d3b66",
-            color: "#fff",
-            padding: "12px",
-            border: "none",
-            borderRadius: "8px",
-            cursor: "pointer",
-            fontWeight: "bold"
-        },
-        mapContainer: {
-            width: "100%",
-            height: "400px",
-            marginTop: "40px"
-        }
-    };
+    button: {
+        background: "#0d3b66",
+        color: "#fff",
+        padding: "12px",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer",
+        fontWeight: "bold"
+    },
+    mapContainer: {
+        width: "100%",
+        height: "400px",
+        marginTop: "40px"
+    }
+};
 
 
