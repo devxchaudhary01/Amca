@@ -52,7 +52,9 @@ const Footer = () => {
           <div className="footer-contactCard">
             <h4 className="footer-contactHeading">GET IN TOUCH WITH US</h4>
             <p className="footer-contactText">
-              📞 +91 98765 43210 <br />
+              📞  (+91) 9217962766 <br />
+              📞  (+91) 9625676397
+              <br />
               📧 support@amcaindustries.com <br />
               🌐 www.amcaindustries.com <br />
               📍 Plot No. 110, NGIA Sector 51, Faridabad 121004
