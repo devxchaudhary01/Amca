@@ -1,23 +1,15 @@
 {
-"headers": [
-{
-"source": "/sitemap.xml",
-"headers": [
-{ "key": "Content-Type", "value": "application/xml" }
-]
-}
-],
-"redirects": [
-{
-"source": "/(.*)",
-"has": [
-{
-"type": "host",
-"value": "amcaindustries.vercel.app"
-}
-],
-"destination": "https://www.amcaindustries.com/$1",
-"permanent": true
-}
-]
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.amcaindustries.com/$1",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "amcaindustries.vercel.app"
+        }
+      ]
+    }
+  ]
 }
