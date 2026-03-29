@@ -2,14 +2,20 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "https://www.amcaindustries.com/$1",
-      "permanent": true,
       "has": [
         {
           "type": "host",
           "value": "amcaindustries.vercel.app"
         }
-      ]
+      ],
+      "destination": "https://www.amcaindustries.com/$1",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
