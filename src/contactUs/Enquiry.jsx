@@ -18,39 +18,27 @@ const EnquiryForm = () => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        if (loading) return;
 
-        setLoading(true);
+        const subject = `Enquiry from ${form.company}`;
 
-        try {
-            const res = await fetch("YOUR_GOOGLE_SCRIPT_URL", {
-                method: "POST",
-                body: JSON.stringify(form),
-            });
+        const body = `
+Company: ${form.company}
+Phone: ${form.phone}
+Email: ${form.email}
+City: ${form.city}
+Product: ${form.product}
+Quantity: ${form.quantity}
 
-            const data = await res.json();
+Details:
+${form.productDetail}
+    `;
 
-            if (data.status === "success") {
-                alert("Enquiry Submitted ✅");
-                setForm({
-                    company: "",
-                    phone: "",
-                    email: "",
-                    city: "",
-                    product: "",
-                    quantity: "",
-                    productDetail: ""
-                });
-            }
-        } catch (err) {
-            alert("Error ❌");
-        } finally {
-            setLoading(false);
-        }
+        const mailtoLink = `mailto:supports@amcaindustries.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
     };
-
     return (
         <>
             <section style={styles.section}>
